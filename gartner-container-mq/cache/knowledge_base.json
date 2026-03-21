@@ -1,0 +1,71 @@
+{
+  "cluster_lifecycle": {
+    "query": "TKE cluster creation provisioning upgrades node management auto-repair SLA availability",
+    "covers": [
+      "cluster provisioning",
+      "version upgrades",
+      "node auto-repair",
+      "SLA",
+      "control plane management"
+    ],
+    "content": "# TKE Cluster Management: Key Documentation Facts\n\n## Facts\n\n- **Node Pool Management**: TKE supports basic node pool features for convenient creation, management, and termination of nodes with dynamic scaling capabilities[1]. Node pools allow you to upgrade both Kubernetes and Docker versions[1] (URL: https://www.tencentcloud.com/document/product/457/35900)\n\n- **Auto Scaling Configuration**: Node pools support auto scaling that automatically adjusts node quantity based on cluster workload[1]. Manual node quantity adjustment is also available as an alternative[1] (URL: https://www.tencentcloud.com/document/product/457/35900)\n\n- **Rapid Scaling Implementation**: TKE provides `tke-autoscaling-placeholder` tool enabling scaling in seconds using low-priority placeholder pods (default 10 replicas, 300m CPU per replica) that reserve buffer resources for high-priority workloads during traffic spikes[2] (URL: https://www.tencentcloud.com/document/product/457/38856)\n\n- **Node Pool Modifications**: You can modify node pool name, operating system, node quantity in scaling groups, and Kubernetes labels/taints; label and taint modifications affect all nodes and may trigger pod rescheduling[1] (URL: https://www.tencentcloud.com/document/product/457/35903)\n\n- **Kubernetes Version Support Lifecycle**: TKE maintains four support stages—GA (General Availability), EOM (End of Marketing at 18 months), EOFS (End of Full Support at 24 months), and EOS (End of Service at 27 months)[6]. Current supported versions include 1.34 (GA: November 25, 2025), 1.32, 1.30, 1.28, 1.26, 1.24, 1.22, and 1.20[6] (URL: https://www.tencentcloud.com/document/product/457/47894)\n\n- **Node Scale-in Behavior**: During auto scaling, nodes are marked unschedulable, pods are drained/deleted, then the node is released[1]. Scale-in evaluation typically occurs within minutes depending on configuration[5] (URL: https://www.tencentcloud.com/document/product/457/35900)\n\n- **Audit and Troubleshooting**: TKE provides audit logs and event services for troubleshooting cluster issues, including tracking cluster-autoscaler events and node health problems[4] (URL: https://www.tencentcloud.com/document/product/457/38937)\n\n## Key URLs\n\n- https://www.tencentcloud.com/document/product/457/35900: Node Pool Overview and auto scaling configuration\n- https://www.tencentcloud.com/document/product/457/38856: Rapid auto scaling with tke-autoscaling-placeholder\n- https://www.tencentcloud.com/document/product/457/47894: Kubernetes version maintenance and support lifecycle\n- https://www.tencentcloud.com/document/product/457/35903: Node pool adjustment procedures\n\n**Note**: [UNVERIFIED] Specific SLA availability percentages and cluster creation provisioning timelines are not detailed in the provided documentation.",
+    "citations": [
+      "https://www.tencentcloud.com/document/product/457/35900",
+      "https://www.tencentcloud.com/document/product/457/38856",
+      "https://www.tencentcloud.com/document/product/457/35903",
+      "https://www.tencentcloud.com/document/product/457/38937",
+      "https://www.tencentcloud.com/techpedia/107146",
+      "https://www.tencentcloud.com/document/product/457/47894",
+      "https://www.tencentcloud.com/document/product/457/30652",
+      "https://www.tencentcloud.com/document/product/457/30631",
+      "https://www.tencentcloud.com/document/product/457/54491",
+      "https://www.tencentcloud.com/document/product/457/35902"
+    ],
+    "fetched_at": "2026-03-09 07:32"
+  },
+  "networking": {
+    "query": "TKE networking VPC-CNI GlobalRouter CNI plugins service mesh TCM load balancing ingress",
+    "covers": [
+      "CNI",
+      "VPC networking",
+      "load balancer",
+      "ingress",
+      "network policy",
+      "service mesh"
+    ],
+    "content": "## Facts\n- No official Tencent Cloud documentation found in search results confirming details on **TKE networking**, **VPC-CNI**, **GlobalRouter**, **CNI plugins**, **TCM service mesh**, **load balancing**, or **ingress** [UNVERIFIED] (no relevant URLs).\n- No metrics (e.g., node limits, supported CNI versions, API versions) or pricing units for TKE networking components available [UNVERIFIED] (no relevant URLs).\n- \"MQ\" mentioned in non-TKE context (e.g., ZeroMQ in ROS2 article), unrelated to TKE or questionnaire [UNVERIFIED] (URL: https://cloud.tencent.com/developer/inventory/2611/article/1495038).\n\n## Key URLs\n- None: Search results contain no official tencentcloud.com TKE documentation on queried topics. Recommend direct search on https://www.tencentcloud.com/document/product/457 for TKE networking facts.",
+    "citations": [
+      "https://cloud.tencent.com/developer/article/1902265",
+      "https://cloud.tencent.com/developer/article/1841490",
+      "https://cloud.tencent.com/developer/article/2063311",
+      "https://cloud.tencent.com/developer/inventory/2611/article/1495038",
+      "https://cloud.tencent.com/developer/article/1902310",
+      "https://cloud.tencent.com/developer/article/1902283"
+    ],
+    "fetched_at": "2026-03-09 07:32"
+  },
+  "storage": {
+    "query": "TKE storage CBS CFS COS CSI driver persistent volumes stateful workloads",
+    "covers": [
+      "persistent storage",
+      "CBS CSI",
+      "CFS NFS",
+      "COS object storage",
+      "stateful sets"
+    ],
+    "content": "## Facts\nNo official Tencent Cloud documentation found in search results confirming **TKE storage options (CBS, CFS, COS), CSI drivers, persistent volumes, or stateful workloads** support[1][2][3][4][5][6][7][8][9][10].  \n- All results unrelated: CVM models[1], Dubbo hosting (no storage details)[2], API docs[3], APM[4], hardware[5], errors[6], WAF[7], regions[8], SMS pricing[9][10] [UNVERIFIED].  \n- TKE storage/C SI/PV facts require direct docs (e.g., TKE CSI docs expected at tencentcloud.com/document/product/457); search incomplete.\n\n## Key URLs\n- [https://www.tencentcloud.com/document/product/213/41951](https://www.tencentcloud.com/document/product/213/41951): CVM model selection (mentions MQ but no TKE storage).\n- [https://www.tencentcloud.com/document/product/457/47669](https://www.tencentcloud.com/document/product/457/47669): TKE Dubbo hosting (namespaces/services, no PV/CSI).\n- No TKE storage-specific URLs in results.",
+    "citations": [
+      "https://www.tencentcloud.com/document/product/213/41951",
+      "https://www.tencentcloud.com/document/product/457/47669",
+      "https://www.tencentcloud.com/document/api/1041/77775",
+      "https://www.tencentcloud.com/document/product/248/68462",
+      "https://www.tencentcloud.com/document/product/1210/61460",
+      "https://www.tencentcloud.com/document/product/248/33884",
+      "https://www.tencentcloud.com/document/product/627/14704",
+      "https://www.tencentcloud.com/document/product/608/18811",
+      "https://intl.cloud.tencent.com/pricing/sms?lang=en",
+      "https://www.tencentcloud.com/document/product/382/8414"
+    ],
+    "fetched_at": "2026-03-09 07:32"
+  }
+}
