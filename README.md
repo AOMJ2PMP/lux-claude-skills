@@ -2,7 +2,7 @@
 
 Auto-synced from Claude Cowork. Last sync: **2026-03-24**
 
-## Skills (14 total)
+## Skills (15 total)
 
 | Skill | Description |
 |-------|-------------|
@@ -20,6 +20,7 @@ Auto-synced from Claude Cowork. Last sync: **2026-03-24**
 | `slack-catchup` | Scan your Slack channels and give you a summary of what you missed. Use this skill whenever the u... |
 | `superpowers-methodology` | >   Apply the Superpowers structured software development methodology when building any software ... |
 | `tencent-cloud-ar` | >   Analyst Relations (AR) skill for Lux, an AR professional at Tencent Cloud (CSIG division).   ... |
+| `tencent-cloud-overseas-kol-sourcing` | Research Tencent Cloud products first, then source, validate, price, and combine overseas creators using TikHub-backed evidence and strict budget/collaboration gates. |
 
 ---
 *This repo is automatically maintained by the `github-skills-sync` skill in Claude Cowork.*
